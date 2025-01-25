@@ -59,7 +59,7 @@
 <script src="/js/partials.js"></script>
 <script>
     document.getElementById('cargar').addEventListener('click', function() {
-        fetch('https://jsonplaceholder.typicode.com/albums') // Asegúrate de cambiar la URL según tus necesidades
+        fetch('https://jsonplaceholder.typicode.com/albums') // 
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
@@ -68,7 +68,7 @@
             })
             .then(data => {
                 const tbody = document.getElementById('tbody');
-                tbody.innerHTML = ''; // Limpiar contenido previo
+                tbody.innerHTML = ''; // 
 
                 data.forEach(album => {
                     const row = document.createElement('tr');

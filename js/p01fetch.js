@@ -4,24 +4,30 @@ const mensaje = document.getElementById("mensaje");
 const tabla = document.getElementById("table");
 const tbody = document.getElementById("tbody");
 
-
 btnCargar.addEventListener('click', cargar);
 btnLimpiar.addEventListener('click', limpiar);
 
-function cargar(){
-    var registros = 0;
-    const http = new XMLHttpRequest;
-    const url = "https://jsonplaceholder.typicode.com/albums";
-    http.open('GET', url, true);
-    http.send();
+let registros = 0; 
 
-    http.onreadystatechange = function(){
-        // Validar
-        if(this.status == 200 && this.readyState == 4){
-            const datos = JSON.parse(this.responseText);
+function cargar() {
+    const url = "https://jsonplaceholder.typicode.com/albums";
+
+    fetch(url)
+        .then(response => {
+            
+            if (!response.ok) {
+                throw new Error('Error en la red: ' + response.status);
+            }
+            return response.json();
+        })
+        .then(datos => {
+            
+            tbody.innerHTML = ''; 
+            registros = 0; 
             datos.forEach(item => {
-                ++registros;
+                registros++; 
                 const fila = document.createElement('tr');
+
                 const columna1 = document.createElement('td');
                 columna1.textContent = registros;
                 fila.appendChild(columna1);
@@ -39,14 +45,18 @@ function cargar(){
                 fila.appendChild(columna4);
 
                 tbody.appendChild(fila);
-
-
             });
             tabla.appendChild(tbody);
-
             mensaje.innerHTML = "Cantidad de Registros: " + registros;
+        })
+        .catch(error => {
+            mensaje.innerHTML = "Surgió un error: " + error.message;
+        });
+}
 
-        }else mensaje.innerHTML = "Surgio un error o aun no termina";
-    }
-
+function limpiar() {
+    
+    tbody.innerHTML = '';
+    mensaje.innerHTML = '';
+    registros = 0; 
 }
