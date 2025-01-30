@@ -33,6 +33,7 @@ fetch(url)
     })
     }
     function mostrar (data){
+        limpiar();
         const fila = document.createElement('tr');
         let registros = 1;
                 const columna1 = document.createElement('td');
