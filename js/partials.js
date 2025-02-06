@@ -10,3 +10,5 @@ fetch('partials/header.html')
 fetch('partials/footer.html')
 .then (response=>response.text())
 .then(data=>document.getElementById('footer_contenido').innerHTML=data);
+
+

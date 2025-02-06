@@ -1,14 +1,8 @@
 const btnBuscar = document.getElementById("btnBuscar");
 const btnLimpiar = document.getElementById("limpiar");
-const mensaje = document.getElementById("mensaje");
-const tabla = document.getElementById("table");
-const tbody = document.getElementById("tbody");
-const titulo = document.getElementById("txtPelicula").value;
-const poster = document.getElementById("poster");
 
 
-btnBuscar.addEventListener('click',buscarPelicula);
-btnLimpiar.addEventListener('click', limpiar);
+
 
 function buscarPelicula(){
 const titulo = document.getElementById("txtPelicula").value;
