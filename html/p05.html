@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Cócteles</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <header class="text-center mb-4">
+            <h1 class="fw-bold">Práctica 05 - API de Cócteles</h1>
+            <p class="text-muted">Usando Fetch y Axios para transferencias de datos</p>
+        </header>
+        
+        <div class="card shadow-sm p-4">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="/img/Apicoctel.png" class="img-fluid" alt="API Cócteles" style="max-width: 200px;">
+                </div>
+                <div class="col-md-8">
+                    <div class="mb-3">
+                        <label for="selectCategoria" class="form-label">Categorías</label>
+                        <select class="form-select" id="selectCategoria">
+                            <option selected>Selecciona una categoría</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="selectCoctel" class="form-label">Cócteles</label>
+                        <select class="form-select" id="selectCoctel">
+                            <option selected>Selecciona un cóctel</option>
+                        </select>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button id="btnCargar" class="btn btn-primary">Cargar Cóctel</button>
+                        <button id="btnLimpiar" class="btn btn-secondary">Limpiar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-4 text-center">
+            <h2 class="fw-bold">Cócteles</h2>
+            <hr>
+            <img src="/img/apipostercoctel.png" class="rounded" alt="Poster" id="poster" style="max-width: 400px;">
+            <p id="mensaje" class="mt-3"></p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/p05.js"></script>
+    <script src="/js/partials.js"></script>
+    
+</body>
+</html>
