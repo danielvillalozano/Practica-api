@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 nombreCoctel.textContent = cocktail.strDrink;
                 poster.src = cocktail.strDrinkThumb;
                 poster.alt = cocktail.strDrink;
-                instrucciones.textContent = cocktail.strInstructions;
+                instrucciones.textContent = cocktail.strInstructionsES 
                 mensaje.innerHTML = "Cóctel cargado correctamente ✅";
             } else {
                 mensaje.innerHTML = "No se encontró un cóctel";
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function limpiar() {
         mensaje.innerHTML = "";
         nombreCoctel.textContent = "";
-        poster.src = "/img/apipostercoctel.png"; // Imagen por defecto
+        poster.src = "/img/apipostercoctel.png"; // 
         poster.alt = "Cóctel";
         instrucciones.textContent = "";
     }

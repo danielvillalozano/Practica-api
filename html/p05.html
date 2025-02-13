@@ -15,14 +15,26 @@
             <div class="card">
                 <img src="/img/Apicoctel.png" class="card-img-top" alt="Práctica 04" style="width: 15rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Práctica 05</h5>
-                    <p class="card-text">Usar el Objeto Fetch para realizar transferencia de información.</p>
+                    <h5 class="card-title">Práctica 04</h5>
+                    <p class="card-text">Usar el Objeto Fetch para obtener información de cócteles.</p>
 
+                    <!-- Selector de Categoría -->
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="inputCoctel" placeholder="Nombre del cóctel">
-                        <label for="inputCoctel">Escribe el nombre del cóctel</label>
+                        <select class="form-select" id="selectCategoria">
+                            <option selected>Seleccionar categoría</option>
+                        </select>
+                        <label for="selectCategoria">Categorías de cócteles</label>
                     </div>
 
+                    <!-- Selector de Cócteles -->
+                    <div class="form-floating">
+                        <select class="form-select" id="selectCoctel">
+                            <option selected>Seleccionar cóctel</option>
+                        </select>
+                        <label for="selectCoctel">Lista de cócteles</label>
+                    </div>
+
+                    <button id="btnCargar" type="button" class="btn btn-secondary">Cargar Categorías</button>
                     <button id="btnBuscar" type="button" class="btn btn-secondary">Buscar Cóctel</button>
                     <button id="btnLimpiar" type="button" class="btn btn-secondary">Limpiar</button>
                     
