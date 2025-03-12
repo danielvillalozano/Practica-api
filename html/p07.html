@@ -1,49 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-<head id="head_contenido">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API de Países</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="container">
         <main>
-            <div id="header_contenido"></div>
-
             <div class="card">
-                <img src="/img/apimundo.jpg" class="card-img-top" alt="Práctica 07" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Práctica 07</h5>
-                    <p class="card-text">Usar el Objeto FETCH para realizar transferencia de información.</p>
+                <h1>API de Países</h1>
+                <p>Ingresa el nombre de un país para obtener su información.</p>
 
-                    <input type="text" id="inputPais" class="form-control w-50" placeholder="Ingrese el nombre del país">
-                    <button id="btnBuscar" type="button" class="btn btn-secondary mt-2">Buscar País</button>
-                    <button id="btnLimpiar" type="button" class="btn btn-secondary mt-2">Limpiar</button>
+                <input type="text" id="inputPais" class="form-control w-50" placeholder="Ingrese el nombre del país">
+                <button id="btnBuscar" type="button" class="btn btn-secondary mt-2">Buscar País</button>
+                <button id="btnLimpiar" type="button" class="btn btn-secondary mt-2">Limpiar</button>
 
-                    <br><br>
-                    <center>
-                        <h2>Información del País</h2>
-                        <br><hr>
-                        <h3 id="nombreComun"></h3>
-                        <h4 id="nombreOficial"></h4>
-                        <img src="/img/apipais.png" class="rounded mx-auto d-block" alt="Bandera" id="bandera" style="max-width: 300px;">
-                        <p><strong>Capital:</strong> <span id="capital"></span></p>
-                        <p><strong>Población:</strong> <span id="poblacion"></span></p>
-                    </center>
-                    <p id="mensaje" class="card-text text-danger"></p>
+                <div id="resultado" class="mt-4">
+                    <h2>Información del País</h2>
+                    <p><strong>Nombre común:</strong> <span id="nombreComun"></span></p>
+                    <p><strong>Nombre oficial:</strong> <span id="nombreOficial"></span></p>
+                    <p><strong>Capital:</strong> <span id="capital"></span></p>
+                    <p><strong>Población:</strong> <span id="poblacion"></span></p>
+                    <img id="bandera" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="Bandera" style="width: 200px;">
                 </div>
+
+                <p id="mensaje" class="text-danger"></p>
             </div>
         </main>
-
         <footer>
-            <div id="footer_contenido"></div>
+            <p>Hecho  usando la API de RestCountries</p>
         </footer>
     </div>
 
-    <script src="/js/p07.js"></script>
-    <script src="/js/partials.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </body>
 </html>

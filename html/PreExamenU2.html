@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo de Nómina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <div class="card">
+                <h1>Recibo de Nómina</h1>
+                <p>Ingresa los datos del trabajador para calcular el pago.</p>
+
+                <label for="puesto">Puesto:</label>
+                <select id="puesto" class="form-control w-50">
+                    <option value="1">Auxiliar</option>
+                    <option value="2">Albañil</option>
+                    <option value="3">Ingeniero de Obra</option>
+                </select>
+
+                <label for="nivel">Nivel:</label>
+                <select id="nivel" class="form-control w-50">
+                    <option value="1">Base</option>
+                    <option value="2">Eventual</option>
+                </select>
+
+                <label for="dias">Días trabajados:</label>
+                <input type="number" id="dias" class="form-control w-50" min="1" placeholder="Ingrese días trabajados">
+                
+                <button id="btnCalcular" type="button" class="btn btn-secondary mt-2">Calcular Pago</button>
+                <button id="btnLimpiar" type="button" class="btn btn-secondary mt-2">Limpiar</button>
+                
+                <div id="resultado" class="mt-4">
+                    <h2>Resultado</h2>
+                    <p><strong>Pago Calculado:</strong> $<span id="pago"></span></p>
+                    <p><strong>Impuesto:</strong> $<span id="impuesto"></span></p>
+                    <p><strong>Total a Pagar:</strong> $<span id="total"></span></p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Calculadora de Recibo de Nómina</p>
+        </footer>
+    </div>
+
+    <script src="/js/PreExamenU2.js"></script>
+    <script src="/js/partials.js"></script>
+</body>
+</html>
